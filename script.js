@@ -1,13 +1,14 @@
+var colorIndex = 0;
+var colors = ["blue", "yellow", "green", "purple", "rgb(250, 175, 72)"];
+
 window.onload = function()
 {
-     var circle =  document.getElementsByClassName("circle");
-     var colors = ["blue", "yellow", "green", "purple", "rgb(250, 175, 72)"];
-     
-     function CreateDiv(circle)
-     {
-          var div = document.createElement("id");
-          object.id = Id;
-          object.addEventListener("click");
-          return div;
-     }
+	document.getElementById("circle").onclick = function() {
+		this.style.background = colors[colorIndex];
+		colorIndex++;
+		if (colorIndex == colors.length) {
+			colorIndex = 0;
+		}
+	}
 }
+//Thank you, Professor Santos
